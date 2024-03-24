@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas Dinámicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flores Amarillas Dinámicas</h1>
+        <div id="flowers"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.flower {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    const flowersContainer = document.getElementById('flowers');
+
+    // Número de flores a mostrar
+    const numFlowers = 10;
+
+    // Generar las flores dinámicamente
+    for (let i = 0; i < numFlowers; i++) {
+        const flower = document.createElement('div');
+        flower.className = 'flower';
+        flowersContainer.appendChild(flower);
+    }
+});
